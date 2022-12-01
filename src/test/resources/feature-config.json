@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "name": "DeviceFeatures",
+  "passThrough": ["eventId"],
+  "transforms": [
+    {
+      "name": "device_os",
+      "useInML" : true,
+      "enabled" : true,
+      "jsltExpression": ".device.osType"
+    },
+    {
+      "name": "device_description",
+      "useInML" : true,
+      "enabled" : true,
+      "jsltExpression": ".device.osType + \" \" + .device.model"
+    }
+  ]
+}
